@@ -1,0 +1,17 @@
+name: "TestSquareNet"
+layer {
+  name: "data"
+  type: "Input"
+  top: "data"
+  input_param { shape: { dim: 1 dim: 3 dim: 227 dim: 227 } }
+}
+
+layer {
+  name: "aursquare"
+  type: "AurSquare"
+  bottom: "data"
+  top: "aursquare"
+  aur_square_param {
+     power: 2
+  }
+}
